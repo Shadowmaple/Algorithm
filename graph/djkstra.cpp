@@ -5,7 +5,7 @@
 using namespace std;
 
 # define NUM 5
-# define INF 9999999
+# define INF 9999999 // 表示无穷大
 
 class Dijkstra {
 private:
