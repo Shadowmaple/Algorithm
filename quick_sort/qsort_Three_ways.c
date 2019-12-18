@@ -2,6 +2,12 @@
 
 # include <stdio.h>
 
+void swap(int *x, int *y) {
+    int z = *x;
+    *x = *y;
+    *y = z;
+}
+
 void quickSort(int *a, int left, int right) {
     if (left >= right) return ;
 
@@ -9,15 +15,11 @@ void quickSort(int *a, int left, int right) {
     int key = a[i];
     while (mid <= j) {
         if (a[mid] < key) {
-            int x = a[mid];
-            a[mid] = a[i];
-            a[i] = x;
+            swap(&a[mid], &a[i]);
             i++;
             mid++;
         } else if (a[mid] > key) {
-            int x = a[mid];
-            a[mid] = a[j];
-            a[j] = x;
+            swap(&a[mid], &a[j]);
             j--;
         } else {
             mid++;
