@@ -49,6 +49,7 @@ void DFS_2(int matrix[][NUM], int v) {
         v = i;
         i = 0;
     }
+    cout << endl;
 }
 
 int main() {
@@ -61,6 +62,7 @@ int main() {
         0,0,0,1,0,0
     };
     int v;
+    cout << "输入起点（从1开始）：";
     cin >> v;
 
     // 输入的节点从1开始
@@ -68,7 +70,6 @@ int main() {
     cout << endl;
 
     DFS_2(matrix, v - 1);
-    cout << endl;
 
     return 0;
 }
